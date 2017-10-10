@@ -744,6 +744,8 @@ enum {
     /* audio bus implemented by the audio system (e.g an MOST stereo channel) */
     AUDIO_DEVICE_OUT_BUS                       = 0x1000000,
     AUDIO_DEVICE_OUT_PROXY                     = 0x2000000,
+    AUDIO_DEVICE_OUT_FM_HEADSET                = 0x10000000,
+    AUDIO_DEVICE_OUT_FM_SPEAKER                = 0x20000000,
     AUDIO_DEVICE_OUT_DEFAULT                   = AUDIO_DEVICE_BIT_DEFAULT,
     AUDIO_DEVICE_OUT_ALL      = (AUDIO_DEVICE_OUT_EARPIECE |
                                  AUDIO_DEVICE_OUT_SPEAKER |
@@ -771,6 +773,8 @@ enum {
                                  AUDIO_DEVICE_OUT_IP |
                                  AUDIO_DEVICE_OUT_BUS |
                                  AUDIO_DEVICE_OUT_PROXY |
+                                 AUDIO_DEVICE_OUT_FM_HEADSET |
+                                 AUDIO_DEVICE_OUT_FM_SPEAKER |
                                  AUDIO_DEVICE_OUT_DEFAULT),
     AUDIO_DEVICE_OUT_ALL_A2DP = (AUDIO_DEVICE_OUT_BLUETOOTH_A2DP |
                                  AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES |
@@ -780,6 +784,8 @@ enum {
                                  AUDIO_DEVICE_OUT_BLUETOOTH_SCO_CARKIT),
     AUDIO_DEVICE_OUT_ALL_USB  = (AUDIO_DEVICE_OUT_USB_ACCESSORY |
                                  AUDIO_DEVICE_OUT_USB_DEVICE),
+    AUDIO_DEVICE_OUT_ALL_FM   = (AUDIO_DEVICE_OUT_FM_HEADSET |
+                                 AUDIO_DEVICE_OUT_FM_SPEAKER),
     /* input devices */
     AUDIO_DEVICE_IN_COMMUNICATION         = AUDIO_DEVICE_BIT_IN | 0x1,
     AUDIO_DEVICE_IN_AMBIENT               = AUDIO_DEVICE_BIT_IN | 0x2,
